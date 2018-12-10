@@ -1,0 +1,84 @@
+#include<stdio.h>
+
+int main(){
+	int j,s,g;
+	printf("masukan jumlah benar peminatan jaringan : "); scanf("%d",&j);
+	printf("masukan jumlah benar peminatan sistem cerdas : "); scanf("%d",&s);
+	printf("masukan jumlah benar peminatan grafik dan multimedia : "); scanf("%d",&g);
+	
+	if(j>=5){
+	if(j>s && j>g){
+		printf("Anda sebaiknya memilih peminatan Jaringan");
+	}
+	if(s>j && s>g){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+	}
+	if(g>j && g>s){
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+	}
+	if(j==s && j>g){
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+	}
+	if(j==g && j>s){
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+	}
+	if(s==g && s>j){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+	}
+	if(j==s && j==g){
+		printf("Anda dapat memelih satu peminatan mana saja");
+	}
+	}
+	
+//
+	if(s>=5){
+	if(j>s && j>g){
+		printf("Anda sebaiknya memilih peminatan Jaringan");
+	}
+	if(s>j && s>g){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+	}
+	if(g>j && g>s){
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+	}
+	if(j==s && j>g){
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+	}
+	if(j==g && j>s){
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+	}
+	if(s==g && s>j){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+	}
+	if(j==s && j==g){
+		printf("Anda dapat memelih satu peminatan mana saja");
+	}
+	}
+//
+	if(g>=5){
+	if(j>s && j>g){
+		printf("Anda sebaiknya memilih peminatan Jaringan");
+	}
+	if(s>j && s>g){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+	}
+	if(g>j && g>s){
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+	}
+	if(j==s && j>g){
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+	}
+	if(j==g && j>s){
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+	}
+	if(s==g && s>j){
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+	}
+	if(j==s && j==g){
+		printf("Anda dapat memelih satu peminatan mana saja");
+	}
+	}else{
+		printf("Anda belum dapat mengambil mata kuliah peminatan, silahkan test kembali 1 minggu setelah hari ini");
+	}
+	return 0;
+}
