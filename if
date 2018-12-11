@@ -1,81 +1,90 @@
 #include<stdio.h>
 
 int main(){
-	int j,s,g;
+	int j,s,g,n,a;
+	a=1;
+	printf("jumlah mahasiswa:");scanf("%d",&n);
+	
+	do{
+	for(1<=n; 1<=n; n--){
+	printf("===============================================================================\n");
+	printf("mahasiswa %d\n", n);
 	printf("masukan jumlah benar peminatan jaringan : "); scanf("%d",&j);
 	printf("masukan jumlah benar peminatan sistem cerdas : "); scanf("%d",&s);
 	printf("masukan jumlah benar peminatan grafik dan multimedia : "); scanf("%d",&g);
+
 	
 	if(j>=5){
 	if(j>s && j>g){
-		printf("Anda sebaiknya memilih peminatan Jaringan");
+		printf("Anda sebaiknya memilih peminatan Jaringan\n");
 	}
 	if(s>j && s>g){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas\n");
 	}
 	if(g>j && g>s){
-		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia\n");
 	}
 	if(j==s && j>g){
-		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas\n");
 	}
 	if(j==g && j>s){
-		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia\n");
 	}
 	if(s==g && s>j){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia\n");
 	}
 	if(j==s && j==g){
-		printf("Anda dapat memelih satu peminatan mana saja");
-	}
+		printf("Anda dapat memelih satu peminatan mana saja\n");
+	}//
 	}
 	else if(s>=5){
 	if(j>s && j>g){
-		printf("Anda sebaiknya memilih peminatan Jaringan");
+		printf("Anda sebaiknya memilih peminatan Jaringan\n");
 	}
 	if(s>j && s>g){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas\n");
 	}
 	if(g>j && g>s){
-		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia\n");
 	}
 	if(j==s && j>g){
-		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas\n");
 	}
 	if(j==g && j>s){
-		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia\n");
 	}
 	if(s==g && s>j){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia \n");
 	}
 	if(j==s && j==g){
-		printf("Anda dapat memelih satu peminatan mana saja");
-	}
-	}else if(s>=5){
+		printf("Anda dapat memelih satu peminatan mana saja\n");
+	}//
+	}else if(g>=5){
 	if(j>s && j>g){
-		printf("Anda sebaiknya memilih peminatan Jaringan");
+		printf("Anda sebaiknya memilih peminatan Jaringan\n");
 	}
 	if(s>j && s>g){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas\n");
 	}
 	if(g>j && g>s){
-		printf("Anda sebaiknya memilih peminatan grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan grafik dan multimedia\n");
 	}
 	if(j==s && j>g){
-		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas");
+		printf("Anda sebaiknya memilih peminatan jaringan atau sistem cerdas\n");
 	}
 	if(j==g && j>s){
-		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia");
+		printf("Anda sebaiknya memilih peminatan jaringan atau grafik dan multimedia\n");
 	}
 	if(s==g && s>j){
-		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia ");
+		printf("Anda sebaiknya memilih peminatan sistem cerdas atau grafik dan multimedia \n");
 	}
 	if(j==s && j==g){
-		printf("Anda dapat memelih satu peminatan mana saja");
+		printf("Anda dapat memelih satu peminatan mana saja\n");
+	}//
+	}else{
+		printf("Anda belum dapat mengambil mata kuliah peminatan, silahkan test kembali 1 minggu setelah hari ini\n");
 	}
-	}
-	else{
-		printf("Anda belum dapat mengambil mata kuliah peminatan, silahkan test kembali 1 minggu setelah hari ini");
-	}
+}
+}while(a<=n);
 	return 0;
 }
