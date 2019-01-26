@@ -1,0 +1,94 @@
+#include <iostream>
+#include <conio.h>
+#include <iomanip>
+#include <string>
+#include <windows.h>
+
+
+using namespace std;
+HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+COORD CursorPosition;
+void gotoxy(int x, int y);
+int main()
+{
+cout <<"NOTA PENJUALAN\n";
+cout <<"Dhimas  MARKET\n";
+cout <<"Jl. Galaxy Jakarta\n";
+cout <<"===========================================================================\n";
+cout <<"| No. | Nama Barang | Jml | Hg Sat | Jml Hg | 	Diskon 	 |     Tot Hg     |\n";
+cout <<"===========================================================================\n";
+
+for(int i=1;i<=15;i++)
+{
+cout<<"                                                              \n";                                                 
+}
+cout<<"===========================================================================\n";
+cout<<"| TOTAL Bayar 	        					          |\n";
+cout<<"===========================================================================\n";
+int i=1; char jw;
+float jml,hgsat,jmlhg,disk,hgdisk,totdisk,totsemua,tothg;
+char nmbrg[30];
+
+do
+{
+gotoxy(0,6+i);cout<<"|";
+gotoxy(3,6+i);cout<<i;
+gotoxy(6,6+i);cout<<"|";
+gotoxy(8,6+i);cin>>nmbrg;
+gotoxy(20,6+i);cout<<"|";
+gotoxy(22,6+i);cin>>jml;
+gotoxy(26,6+i);cout<<"|";
+gotoxy(28,6+i);cin>>hgsat;
+gotoxy(35,6+i);cout<<"|";
+jmlhg=jml*hgsat;
+gotoxy(37,6+i);cout<<jmlhg;
+gotoxy(44,6+i);cout<<"|";
+if(jml>=15){
+gotoxy(46,6+i);cout<<"20 %";
+hgdisk=0.2*jmlhg;
+gotoxy(52,6+i);cout<<hgdisk;
+gotoxy(57,6+i);cout<<"|";
+tothg=jmlhg-hgdisk;
+totdisk=totdisk+hgdisk;
+totsemua=totsemua+tothg;
+gotoxy(59,6+i);cout<<"Rp.";
+gotoxy(67,6+i);cout<<tothg;
+gotoxy(74,6+i);cout<<"|";
+gotoxy(52,22);cout<<totdisk;
+gotoxy(57,22);cout<<"|";
+gotoxy(59,22);cout<<"Rp.";
+gotoxy(67,22);cout<<totsemua;
+gotoxy(30,1);cout<<"Input data lagi [y/t]? ";cin>>jw;
+i++;
+gotoxy(30,1);
+}else{
+gotoxy(46,6+i);cin>>disk;cout<<"|";
+hgdisk=(disk/100)*jmlhg;
+gotoxy(49,6+i);cout<<"%";
+gotoxy(52,6+i);cout<<hgdisk;
+gotoxy(57,6+i);cout<<"|";
+tothg=jmlhg-hgdisk;
+totdisk=totdisk+hgdisk;
+totsemua=totsemua+tothg;
+gotoxy(59,6+i);cout<<"Rp.";
+gotoxy(67,6+i);cout<<tothg;
+gotoxy(74,6+i);cout<<"|";
+gotoxy(52,22);cout<<totdisk;
+gotoxy(57,22);cout<<"|";
+gotoxy(59,22);cout<<"Rp.";
+gotoxy(67,22);cout<<totsemua;
+gotoxy(30,1);cout<<"Input data lagi [y/t]? ";cin>>jw;
+i++;
+gotoxy(30,1);
+}
+}while(jw=='y'||jw=='Y');
+getch();
+}
+
+void gotoxy(int x, int y) 
+{ 
+	CursorPosition.X = x; 
+	CursorPosition.Y = y; 
+	SetConsoleCursorPosition(console,CursorPosition);
+}
+
